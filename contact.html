@@ -28,12 +28,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="heroes.html">Přehled hrdinů</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shrek.html">Shrek</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="auta.html">Auta</a>
-                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Více</a>
@@ -62,17 +56,15 @@
         </div>
     </nav>
 
-    <div class="container">
-        <p></p>
+    <div class="container mt-5">
         <h1>Kontakt:</h1>
-        <p></p>
-        <h3>E-mail:</h3>
+        <h3 class="mt-5">E-mail:</h3>
         <div class="form-floating mb-1 mt-2">
             <input type="text" class="form-control" placeholder="E-mail" required>
             <label for="E-mail">E-mail</label>
         </div>
         <p></p>
-        <h3>Text:</h3>
+        <h3 class="mt-5">Text:</h3>
         <textarea name="content" id="editor"></textarea>
 
         <script>
@@ -83,8 +75,9 @@
                 });
         </script>
         <p></p>
-        <button type="submit" class="btn btn-primary me-3">Odeslat</button>
-
+        <div class="d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary">Odeslat</button>
+        </div>
     </div>
 
 </body>
