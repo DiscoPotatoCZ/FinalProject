@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hrdinové Hearthstonu</title>
+    <title>Balíčky</title>
     <link rel="stylesheet" href="node_modules/bootswatch/dist/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules\select2\dist\css\select2.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules\select2\dist\js\select2.min.js"></script>
+
 </head>
 
 <body>
@@ -30,12 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="balicky.html">Přehled decků</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="auta.html">Auta</a>
-                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-haspopup="true" aria-expanded="false">Více</a>
+                        <!-- <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" -->
+                        aria-haspopup="true" aria-expanded="false">Více</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="https://hsreplay.net/decks/#rankRange=GOLD"
                                 target="_blank">Meta balíčky</a>
@@ -62,26 +62,117 @@
     </nav>
     <div class="container">
         <H1 class="pt-5 text-center">Balíčky pro jednotlivé hrdiny</H1>
-        <p>Zde nabízím přehled balíčků podle class a karty kolem kterých se hrají. Výběr balíčku ovlivňují hravně vlastněné karty, primárně legendárky, jelikož ty jsou nejnáročnější na vytvoření.</p>
-    <table class="table table-primary">
-    <thead>
-        <tr>
-            <th class="pe-3">Hrdina</th>
-            <th class="pe-3">Název balíčku</th>
-            <th class="pe-5">Winrate</th>
-            <th class="pe-5">Hlavní karty</th>
-        </tr>
-    </thead>
-        <tr>
-            <td>fasdf</td>
-            <td>fadsf</td>
-            <td>fadsf</td>
-        </tr>
-        <tr>
-            <td>fadsf</td>
-            <td>vycxvx</td>
-            <td>yvcxv</td>
-        </tr>
-    </table>
+        <p>Zde nabízím přehled balíčků podle class a karty kolem kterých se hrají. Výběr balíčku ovlivňují hravně
+            vlastněné karty, primárně legendárky, jelikož ty jsou nejnáročnější na vytvoření.</p>
+        <table class="table table-secondary table-striped">
+            <thead>
+                <tr class="table-danger">
+                    <th class="pe-3">Hrdina</th>
+                    <th class="pe-3">Název balíčku</th>
+                    <th class="pe-5">Winrate</th>
+                    <th class="pe-5">Důležité karty</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Paladin</td>
+                <td><a
+                        href="https://hsreplay.net/decks/3yLdvrWUcfV2uAz3CRdKGf/#rankRange=GOLD&gameType=RANKED_STANDARD">Handbuff</a>
+                </td>
+                <td>64,6%</td>
+                <td><a
+                        href="https://hsreplay.net/cards/102983/zilliax-deluxe-3000#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Zilliax</a>,
+                    <a
+                        href="https://hsreplay.net/cards/111462/leeroy-jenkins#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Leeroy
+                        Jenkins</a>, <a
+                        href="https://hsreplay.net/cards/101112/muscle-o-tron#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Muscle-o-Tron</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Palladin</td>
+                <td><a
+                        href="https://hsreplay.net/decks/SCtpap03iNBFjlDJ5yrzrb/#rankRange=GOLD&gameType=RANKED_STANDARD">Flood</a>
+                </td>
+                <td>63,4%</td>
+                <td><a
+                        href="https://hsreplay.net/cards/103633/tigress-plushy#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Tigress
+                        Plushy</a>, <a
+                        href="https://hsreplay.net/cards/101109/showdown#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Showdown!</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Warrior</td>
+                <td><a
+                        href="https://hsreplay.net/decks/LC4qdU41DHZrW6oJJhLJXd/#rankRange=GOLD&gameType=RANKED_STANDARD">Highlander</a>
+                </td>
+                <td>61,7%</td>
+                <td><a
+                        href="https://hsreplay.net/cards/103471/reno-lone-ranger#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Reno</a>,
+                    <a
+                        href="https://hsreplay.net/cards/104528/deepminer-brann#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Deepminer
+                        Brann</a>, <a
+                        href="https://hsreplay.net/cards/102983/zilliax-deluxe-3000#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Zilliax</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Warrior</td>
+                <td><a
+                        href="https://hsreplay.net/decks/ELvgLsuEdW8P5FObtOPaib/#rankRange=GOLD&gameType=RANKED_STANDARD">Control</a>
+                </td>
+                <td>60.2%</td>
+                <td><a
+                        href="https://hsreplay.net/cards/97061/odyn-prime-designate#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Odyn</a>,
+                    <a
+                        href="https://hsreplay.net/cards/101033/yogg-saron-unleashed#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Yogg-Saron</a>,
+                    <a
+                        href="https://hsreplay.net/cards/92268/bridge-riff#rankRange=GOLD&gameType=RANKED_STANDARD&tab=recommended-decks">Bridge
+                        Riff</a></td>
+            </tr>
+            <tr>
+                <td>Warlock</td>
+                <td><a
+                        href="https://hsreplay.net/decks/dIsWmWZNdjHrp5MW26OySc/#rankRange=GOLD&gameType=RANKED_STANDARD">Insanity</a>
+                </td>
+                <td>56.9%</td>
+                <td>Symphony of sins, Photographer Fizzle, Domino Effect</td>
+            </tr>
+            <tr>
+                <td>Warlock</td>
+                <td><a
+                        href="https://hsreplay.net/decks/HfAB0U1LnFZeT8q74cj64/#rankRange=GOLD&gameType=RANKED_STANDARD">Pain</a>
+                </td>
+                <td>60,1%</td>
+                <td>Fire imp, Pop'gar the Putrid, Sheriff Barrelbrim</td>
+            </tr>
+            <tr>
+                <td>Warlock</td>
+                <td><a
+                        href="https://hsreplay.net/decks/Ey9sQ43p2yvHneoShY8KXb/#rankRange=GOLD&gameType=RANKED_STANDARD">Sludge</a>
+                </td>
+                <td>62,0%</td>
+                <td>Sludge on Wheels, Disposal Assistant, Waste Remover</td>
+            </tr>
+            <tr>
+                <td>Warlock</td>
+                <td><a
+                        href="https://hsreplay.net/decks/zOeFpUd6GjxGregfwUdKo/#rankRange=GOLD&gameType=RANKED_STANDARD">Mining</a>
+                </td>
+                <td>54,0%</td>
+                <td>Burrow Buster, Saloon Brewmaster, Zola the Gorgon</td>
+            </tr>
+        </table>
+        <label for="multipleSelect" class="pt-5 pb-5">
+            <h5>Které karty vlastníte?</h5>
+        </label>
+        <select multiple class="form-control" id="multipleSelect" name="karty">
+            <option value="Burrow Buster">Burrow Buster</option>
+            <option value="Saloon Brewmaster">Saloon Brewmaster</option>
+            <option value="Zola the Gorgon">Zola the Gorgon</option>
+            <option value="Sludge on Wheels">Sludge on Wheels</option>
+            <option value="Disposal Assistant">Disposal Assistant</option>
+            <option value="Waste Remover">Waste Remover</option>
+            <option value="Zilliax">Zilliax</option>
+            <option value="Odyn">Odyn</option>
+            <option value="Domino Effect">Domino Effect</option>
+        </select>
     </div>
-    </body>
+</body>
