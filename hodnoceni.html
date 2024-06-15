@@ -7,6 +7,7 @@
     <title>Hearthstone</title>
     <link rel="stylesheet" href="node_modules/bootswatch/dist/lux/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Přidal jsem jQuery -->
 </head>
 
 <body>
@@ -84,31 +85,31 @@
                     <div class="form-group">
                         <label>Co se vám líbí</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="design" id="wDesign">
+                            <input class="form-check-input like-checkbox" type="checkbox" value="design" id="wDesign">
                             <label class="form-check-label" for="wDesign">
                                 Design
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="pouzitelnost" id="wPouzitelnost">
+                            <input class="form-check-input like-checkbox" type="checkbox" value="pouzitelnost" id="wPouzitelnost">
                             <label class="form-check-label" for="wPouzitelnost">
                                 Použitelnost
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="vykon" id="wVykon">
+                            <input class="form-check-input like-checkbox" type="checkbox" value="vykon" id="wVykon">
                             <label class="form-check-label" for="wVykon">
                                 Výkon
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="kontent" id="wKontent">
+                            <input class="form-check-input like-checkbox" type="checkbox" value="kontent" id="wKontent">
                             <label class="form-check-label" for="wKontent">
                                 Obsah
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="podpora" id="wPodpora">
+                            <input class="form-check-input like-checkbox" type="checkbox" value="podpora" id="wPodpora">
                             <label class="form-check-label" for="wPodpora">
                                 Podpora
                             </label>
@@ -119,31 +120,31 @@
                     <div class="form-group">
                         <label>Co se vám nelíbí</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="design" id="lDesign">
+                            <input class="form-check-input dislike-checkbox" type="checkbox" value="design" id="lDesign">
                             <label class="form-check-label" for="lDesign">
                                 Design
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="pouzitelnost" id="lPouzitelnost">
+                            <input class="form-check-input dislike-checkbox" type="checkbox" value="pouzitelnost" id="lPouzitelnost">
                             <label class="form-check-label" for="lPouzitelnost">
                                 Použitelnost
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="vykon" id="lVykon">
+                            <input class="form-check-input dislike-checkbox" type="checkbox" value="vykon" id="lVykon">
                             <label class="form-check-label" for="lVykon">
                                 Výkon
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="kontent" id="lKontent">
+                            <input class="form-check-input dislike-checkbox" type="checkbox" value="kontent" id="lKontent">
                             <label class="form-check-label" for="lKontent">
                                 Obsah
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="podpora" id="lPodpora">
+                            <input class="form-check-input dislike-checkbox" type="checkbox" value="podpora" id="lPodpora">
                             <label class="form-check-label" for="lPodpora">
                                 Podpora
                             </label>
@@ -153,5 +154,32 @@
             </div>
             <button type="submit" class="btn btn-primary mt-3">Odeslat</button>
         </form>
+
+        <script>
+            $(document).ready(function() {
+                $('.like-checkbox').change(function() {
+                    var id = $(this).attr('id');
+                    var oppositeId = 'l' + id.substring(1); 
+                    var oppositeCheckbox = $('#' + oppositeId);
+    
+                    if ($(this).prop('checked')) {
+                        oppositeCheckbox.prop('checked', false);
+                    }
+                });
+    
+                $('.dislike-checkbox').change(function() {
+                    var id = $(this).attr('id');
+                    var oppositeId = 'w' + id.substring(1); 
+                    var oppositeCheckbox = $('#' + oppositeId);
+    
+                    if ($(this).prop('checked')) {
+                        oppositeCheckbox.prop('checked', false);
+                    }
+                });
+            });
+        </script>
+
     </div>
 </body>
+
+</html>
