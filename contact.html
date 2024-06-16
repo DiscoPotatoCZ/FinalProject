@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="node_modules/bootswatch/dist/lux/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -85,5 +99,18 @@
         <button type="submit" class="btn btn-primary">Odeslat</button>
         </div>
     </div>
+
+    <footer class="bg-dark text-white mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">Web vytvořil: Jiří Dvořák, Petr Gavenda</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <a href="dokumentace.pdf" class="btn btn-primary" download>Dokumentace</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
