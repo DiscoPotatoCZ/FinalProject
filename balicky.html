@@ -7,6 +7,7 @@
     <title>Balíčky</title>
     <link rel="stylesheet" href="node_modules/bootswatch/dist/lux/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules\select2\dist\css\select2.min.css">
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="node_modules\select2\dist\js\select2.min.js"></script>
 
@@ -33,8 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="balicky.html">Přehled decků</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hodnoceni.html">Hodnocení webu</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <!-- <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" -->
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Více</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="https://hsreplay.net/decks/#rankRange=GOLD"
@@ -160,10 +164,11 @@
                 <td>Burrow Buster, Saloon Brewmaster, Zola the Gorgon</td>
             </tr>
         </table>
-        <label for="multipleSelect" class="pt-5 pb-5">
+        <label for="multipleSelect" class="pt-5">
             <h5>Které karty vlastníte?</h5>
         </label>
-        <select multiple class="form-control" id="multipleSelect" name="karty">
+        <div class="pb-5">
+            <select id="multiple" class="js-states form-control" multiple>
             <option value="Burrow Buster">Burrow Buster</option>
             <option value="Saloon Brewmaster">Saloon Brewmaster</option>
             <option value="Zola the Gorgon">Zola the Gorgon</option>
@@ -172,7 +177,27 @@
             <option value="Waste Remover">Waste Remover</option>
             <option value="Zilliax">Zilliax</option>
             <option value="Odyn">Odyn</option>
+            <option value="Fire imp">Fire imp</option>
+            <option value="Pop'gar the Putrid">Pop'gar the Putrid</option>
+            <option value="Sheriff Barrelbrim">Sheriff Barrelbrim</option>
+            <option value="Symphony of sins">Symphony of sins</option>
+            <option value="Photographer Fizzle">Photographer Fizzle</option>
             <option value="Domino Effect">Domino Effect</option>
+            <option value="Bridge Riff">Bridge Riff</option>
+            <option value="Yogg-Saron">Yogg-Saron</option>
+            <option value="Deepminer Brann">Deepminer Brann</option>
+            <option value="Reno">Reno</option>
+            <option value="Showdown!">Showdown!</option>
+            <option value="Tigress Plushy">Tigress Plushy</option>
+            <option value="Muscle-o-Tron">Muscle-o-Tron</option>
+            <option value="Leeroy Jenkins">Leeroy Jenkins</option>
         </select>
+        <script>
+            $("#multiple").select2({
+                placeholder: "Vyberte vlastněné karty",
+                allowClear: true
+            });
+          </script>
+    </div>
     </div>
 </body>
